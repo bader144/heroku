@@ -28,7 +28,7 @@ userController.sorting = async(req, res, next) =>{
         const results = await User.find({}).sort({
           messages: -1,
         })
-        .limit(10)
+        .limit(999999)
         return res.send({results});
         
     } catch (e) {
